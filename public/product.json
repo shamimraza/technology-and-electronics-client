@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "image": "https://i.ibb.co/WDZ3Mnb/iphone-518101-1280.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Samsung",
+    "image": "https://i.ibb.co/j5Mf3PD/android-1814556-1280.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sony",
+    "image": "https://i.ibb.co/ChMhy7B/camera-275007-1280.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Google",
+    "image": "https://i.ibb.co/CzSNYYQ/office-625892-1280.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Intel",
+    "image": "https://i.ibb.co/sQFV26G/processor-1371357-1280.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Monitor",
+    "image": "https://i.ibb.co/fx5Zm49/template-badge-layout-mock-up-visual-blank-concept-53876-127513.jpg"
+  }
+]
