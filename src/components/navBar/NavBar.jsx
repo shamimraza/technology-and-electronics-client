@@ -66,10 +66,10 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="flex items-center ">
-          <img className="w-20 h-20 hidden lg:block" src={navImg} alt="" />
+          <img className="w-30 h-24 hidden lg:block" src={navImg} alt="" />
           <h2>
             <span className="text-4xl font-bold  text-amber-500">
-              Electronics
+              {/* Electronics */}
             </span>
           </h2>
         </div>

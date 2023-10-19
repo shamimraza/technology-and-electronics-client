@@ -34,6 +34,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+
         setSusses("User sussesfully register");
         updateProfile(result.user, {
           displayName: name,
