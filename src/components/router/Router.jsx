@@ -6,6 +6,7 @@ import Cart from "../cart/Cart";
 import Login from "../login/Login";
 import Register from "../register/Register";
 import ProductBrands from "../productBrand/ProductBrands";
+import RedirectPage from "../redirect/RedirectPage";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,14 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/productbrand",
+        path: "/productBrands",
         element: <ProductBrands></ProductBrands>,
+        loader: () => fetch("http://localhost:5000/brand"),
+      },
+      {
+        path: "/redirect/:id",
+        element: <RedirectPage></RedirectPage>,
+        loader: () => fetch("/product.json"),
       },
     ],
   },

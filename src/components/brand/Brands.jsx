@@ -12,7 +12,7 @@ const Brands = () => {
   return (
     <div>
       <h2 className="text-center text-4xl mt-16 font-serif">brand Item</h2>
-      <Link to="productbrand">
+      <Link>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-9">
           {brands.map((brand) => (
             <Brand key={brand.id} brand={brand}></Brand>
