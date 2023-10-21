@@ -5,8 +5,6 @@ import Product from "../Product/Product";
 import Cart from "../cart/Cart";
 import Login from "../login/Login";
 import Register from "../register/Register";
-import ProductBrands from "../productBrand/ProductBrands";
-import RedirectPage from "../redirect/RedirectPage";
 
 const router = createBrowserRouter([
   {
@@ -16,11 +14,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/product",
         element: <Product></Product>,
       },
+
       {
         path: "/cart",
         element: <Cart></Cart>,
@@ -32,16 +32,6 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
-      },
-      {
-        path: "/productBrands",
-        element: <ProductBrands></ProductBrands>,
-        loader: () => fetch("http://localhost:5000/brand"),
-      },
-      {
-        path: "/redirect/:id",
-        element: <RedirectPage></RedirectPage>,
-        loader: () => fetch("/product.json"),
       },
     ],
   },

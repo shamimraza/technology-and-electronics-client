@@ -4,29 +4,27 @@ const Product = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-
-    const text = form.text.value;
-    const brandItem = form.brand.value;
+    const name = form.name.value;
+    const brand = form.brand.value;
     const price = form.price.value;
     const description = form.description.value;
-    const star = form.star.value;
-    const photo = form.photo.value;
-    const item = form.item.value;
-    const brand2 = form.brand2.value;
+    const rating = form.rating.value;
+    const types = form.types.value;
+    const image = form.image.value;
+
     const newBrand = {
-      text,
-      brandItem,
-      brand2,
+      name,
+      brand,
       price,
       description,
-      star,
-      photo,
-      item,
+      rating,
+      types,
+      image,
     };
     console.log(newBrand);
 
     // sent data to the server
-    fetch("http://localhost:5000/brand", {
+    fetch("http://localhost:5000/brands", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -60,7 +58,7 @@ const Product = () => {
             </label>
             <label className="input-group">
               <input
-                name="text"
+                name="name"
                 type="text"
                 placeholder="Name"
                 className="input input-bordered w-full"
@@ -73,7 +71,7 @@ const Product = () => {
             </label>
             <label className="input-group">
               <input
-                name="brandItem"
+                name="brand"
                 type="text"
                 placeholder="Brand Name"
                 className="input input-bordered w-full"
@@ -118,7 +116,7 @@ const Product = () => {
             </label>
             <label className="input-group">
               <input
-                name="star"
+                name="rating"
                 type="text"
                 placeholder="Enter price rating"
                 className="input input-bordered w-full"
@@ -131,38 +129,25 @@ const Product = () => {
             </label>
             <label className="input-group">
               <input
-                name="brand2"
+                name="types"
                 type="text"
-                placeholder="Brand Name"
+                placeholder="Brand Type"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
         </div>
         {/* form row 4*/}
-        <div className="md:flex mb-6">
-          <div className="form-control md:w-1/2">
+        <div className=" mb-6">
+          <div className="form-control w-full">
             <label className="label">
-              <span className="label-text">Image</span>
+              <span className="label-text">Image Url</span>
             </label>
             <label className="input-group">
               <input
-                name="photo"
+                name="image"
                 type="text"
                 placeholder="Enter Photo Url"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">Items</span>
-            </label>
-            <label className="input-group">
-              <input
-                name="item"
-                type="text"
-                placeholder="Items"
                 className="input input-bordered w-full"
               />
             </label>

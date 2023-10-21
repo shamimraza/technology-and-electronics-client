@@ -33,9 +33,6 @@ const NavBar = () => {
       <li>
         <NavLink to="/cart">My Cart</NavLink>
       </li>
-      <li>
-        <NavLink to="/productBrands">Product</NavLink>
-      </li>
     </>
   );
   return (

@@ -1,5 +1,4 @@
 import banner from "../../assets/consumer-and-home-electronicstvfridgevacuum-cleanermicrowavewasher-HKPR1N-removebg-preview.png";
-import Brands from "../brand/Brands";
 
 const Header = () => {
   return (
@@ -18,10 +17,8 @@ const Header = () => {
             offer
           </h2>
         </div>
-
         <img src={banner} alt="" />
       </div>
-      <Brands></Brands>
     </div>
   );
 };
