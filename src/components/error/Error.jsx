@@ -1,7 +1,9 @@
 const Error = () => {
   return (
     <div>
-      <h2 className="text-center">Opps not fount</h2>
+      <h2 className="text-center mt-32 text-3xl font-extrabold">
+        Opps Page not fount !!!
+      </h2>
     </div>
   );
 };

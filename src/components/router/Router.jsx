@@ -5,16 +5,25 @@ import Product from "../Product/Product";
 import Cart from "../cart/Cart";
 import Login from "../login/Login";
 import Register from "../register/Register";
+import Advertisement from "../Advaritisement/Advertisement";
+import Error from "../error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("http://localhost:5000/brands"),
+      },
+      {
+        path: "advertisement/:brand",
+        element: <Advertisement></Advertisement>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.brand}`),
       },
       {
         path: "/product",

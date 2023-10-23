@@ -24,7 +24,7 @@ const Product = () => {
     console.log(newBrand);
 
     // sent data to the server
-    fetch("http://localhost:5000/brands", {
+    fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
