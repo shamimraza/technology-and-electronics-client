@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BrandCard = ({ user }) => {
-  const { name, image, brand } = user;
+  const { name, image } = user;
   console.log(user);
   return (
     <div>

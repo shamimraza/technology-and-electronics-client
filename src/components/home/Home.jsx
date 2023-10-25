@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../header/Header";
 import BrandCard from "../brands/BrandCard";
+import HotDell from "../hotDell/HotDell";
 
 const Home = () => {
   const users = useLoaderData();
@@ -19,6 +20,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <HotDell></HotDell>
     </div>
   );
 };

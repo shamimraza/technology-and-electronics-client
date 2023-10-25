@@ -4,10 +4,6 @@ import SingleProducts from "./singleProduct/SingleProducts";
 const Advertisement = () => {
   const products = useLoaderData();
   console.log(products);
-  // const { id } = useParams();
-  // const product = products.filter((product) => product.brand === id);
-
-  // console.log(product);
 
   return (
     <div>

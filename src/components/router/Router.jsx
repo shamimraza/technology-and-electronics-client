@@ -7,6 +7,8 @@ import Login from "../login/Login";
 import Register from "../register/Register";
 import Advertisement from "../Advaritisement/Advertisement";
 import Error from "../error/Error";
+import Details from "../details/Details";
+import HotDell from "../hotDell/HotDell";
 
 const router = createBrowserRouter([
   {
@@ -26,13 +28,25 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/product/${params.brand}`),
       },
       {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
+      },
+      {
         path: "/product",
         element: <Product></Product>,
+      },
+      {
+        path: "/dell",
+        element: <HotDell></HotDell>,
+        loader: fetch("http://localhost:5000/products"),
       },
 
       {
         path: "/cart",
         element: <Cart></Cart>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/login",
