@@ -20,13 +20,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () =>
+          fetch(
+            "https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/brands"
+          ),
       },
       {
         path: "advertisement/:brand",
         element: <Advertisement></Advertisement>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.brand}`),
+          fetch(
+            `https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/product/${params.brand}`
+          ),
       },
       {
         path: "/details/:id",
@@ -36,7 +41,9 @@ const router = createBrowserRouter([
           </PrivetRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/product",
@@ -49,7 +56,9 @@ const router = createBrowserRouter([
       {
         path: "/dell",
         element: <HotDell></HotDell>,
-        loader: fetch("http://localhost:5000/products"),
+        loader: fetch(
+          "https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/products"
+        ),
       },
 
       {

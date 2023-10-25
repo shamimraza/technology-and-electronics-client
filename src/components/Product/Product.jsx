@@ -24,13 +24,16 @@ const Product = () => {
     console.log(newBrand);
 
     // sent data to the server
-    fetch("http://localhost:5000/products", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newBrand),
-    })
+    fetch(
+      "https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/products",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newBrand),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

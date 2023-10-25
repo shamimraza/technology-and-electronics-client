@@ -1,4 +1,4 @@
-<!-- Click here for the live site : # https://educational-training-eve-d4e34.web.app -->
+Click here for the live site : # https://technology-and-electroni-3122a.web.app/
 
 - Shown by posts to the client site via get and put on the server site
 - By bringing the data through the use loader, various tasks have been done on the web site

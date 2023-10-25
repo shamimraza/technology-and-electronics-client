@@ -19,13 +19,16 @@ const Details = () => {
     };
     console.log(addToCard);
 
-    fetch("http://localhost:5000/adToCardProduct", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(addToCard),
-    })
+    fetch(
+      "https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/adToCardProduct",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(addToCard),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

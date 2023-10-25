@@ -8,7 +8,9 @@ const Cart = () => {
   const [userOrder, setUserOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/adToCardProduct/${user?.email}`)
+    fetch(
+      `https://technology-and-electronics-server-2mibcf44w-shamimraza.vercel.app/adToCardProduct/${user?.email}`
+    )
       .then((res) => res.json())
       .then((result) => setUserOrder(result));
   }, [user?.email]);
