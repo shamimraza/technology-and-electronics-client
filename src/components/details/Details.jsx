@@ -1,10 +1,38 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Details = () => {
+  const { user } = useContext(AuthContext);
   const detailsData = useLoaderData();
   console.log(detailsData);
-
   const { name, price, description, types, image } = detailsData;
+  const userEmail = user.email;
+  const handleAddTOCard = () => {
+    const addToCard = {
+      name,
+      price,
+      description,
+      types,
+      image,
+      userEmail,
+    };
+    console.log(addToCard);
+
+    fetch("http://localhost:5000/adToCardProduct", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addToCard),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("yes paici");
+        }
+      });
+  };
 
   return (
     <div className="card card-side bg-base-100 shadow-xl">
@@ -17,9 +45,12 @@ const Details = () => {
         <p>Brand Type : {types}</p>
         <p>Description : {description}</p>
         <div className="card-actions justify-end">
-          <Link to="/cart">
-            <button className="btn btn-outline btn-success">Add to Cart</button>
-          </Link>
+          <button
+            onClick={handleAddTOCard}
+            className="btn btn-outline btn-success"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

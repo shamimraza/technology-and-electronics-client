@@ -9,6 +9,7 @@ import Advertisement from "../Advaritisement/Advertisement";
 import Error from "../error/Error";
 import Details from "../details/Details";
 import HotDell from "../hotDell/HotDell";
+import PrivetRoutes from "../privet route/PrivetRoutes";
 
 const router = createBrowserRouter([
   {
@@ -29,13 +30,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: (
+          <PrivetRoutes>
+            <Details></Details>
+          </PrivetRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.id}`),
       },
       {
         path: "/product",
-        element: <Product></Product>,
+        element: (
+          <PrivetRoutes>
+            <Product></Product>
+          </PrivetRoutes>
+        ),
       },
       {
         path: "/dell",
@@ -46,7 +55,6 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart></Cart>,
-        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/login",

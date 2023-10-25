@@ -1,8 +1,7 @@
-# React + Vite
+<!-- Click here for the live site : # https://educational-training-eve-d4e34.web.app -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Shown by posts to the client site via get and put on the server site
+- By bringing the data through the use loader, various tasks have been done on the web site
+- Created by generating data from MongDB and then posting the post method to the client site
+- gmail and google work done through authentic from firebase
+- gmail and detail page are routed to private and cannot be accessed without login.
